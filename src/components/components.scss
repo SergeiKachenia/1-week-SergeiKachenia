@@ -1,2 +1,16 @@
 @import 'header/header';
 @import 'footer/footer';
+@import 'article/article';
+@import 'process/process';
+@import 'why/why';
+body {
+    font-family: $fontFamily;
+    margin: $center;
+    padding: 0;
+    max-width: $desktop;
+    min-width: $mobile;
+}
+
+.main {
+    background: $PageBackColor;
+}

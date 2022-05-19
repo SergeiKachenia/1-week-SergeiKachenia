@@ -1,1 +1,67 @@
-
+.header {
+    height: 100px;
+    margin: 33px 3% 55px 3%;
+    @include flex(row, space-between, center);
+    .header__logo {
+        @include backgroundImage('../../assets/images/Logo.jpg', center, no-repeat, cover, 100px, 100px);
+    }
+    .header__burger-menu {
+        @include backgroundImage('../../assets/images/burger menu.svg', center, no-repeat, cover, 56px, 56px);
+    }
+    .header__nav {
+        @include flex(row, space-between, center);
+        width: 35%;
+        .header__nav-item {
+            @include font(1rem, 700, 144%, center, 1, $secondaryTextColor);
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.07rem;
+        }
+    }
+    .header__callback {
+        @include font(0.875rem, 700, 122%, center, 1, $quaternaryTextColor);
+        text-transform: uppercase;
+        border-bottom: 1px dashed $quaternaryTextColor;
+        padding-bottom: 5px;
+        letter-spacing: 0.04rem;
+    }
+    .header__tel {
+        @include font(1rem, 400, 122%, center, 1, $secondaryTextColor);
+        letter-spacing: 0.08em;
+        .header__bold-tel {
+            color: $primaryTextColor;
+        }
+    }
+    .header__links {
+        @include flex(row, space-between, center);
+        .header__link_vk {
+            @include backgroundImage('../../assets/images/vk.svg', center, no-repeat, cover, 20px, 20px);
+            margin-right: 12px;
+        }
+        .header__link_telegram {
+            @include backgroundImage('../../assets/images/telegram.svg', center, no-repeat, cover, 20px, 20px);
+            margin-right: 12px;
+        }
+        .header__link_instagram {
+            @include backgroundImage('../../assets/images/instagram.svg', center, no-repeat, cover, 20px, 20px);
+            margin-right: 12px;
+        }
+        .header__link_whatsapp {
+            @include backgroundImage('../../assets/images/whatsapp.svg', center, no-repeat, cover, 20px, 20px);
+        }
+    }
+    .header__buttons {
+        @include flex(row, space-between, center);
+        .header__button_search {
+            @include backgroundImage('../../assets/images/search.svg', center, no-repeat, cover, 60px, 60px);
+            margin-right: 16px;
+        }
+        .header__button_like {
+            @include backgroundImage('../../assets/images/like.svg', center, no-repeat, cover, 60px, 60px);
+            margin-right: 16px;
+        }
+        .header__button_orders {
+            @include backgroundImage('../../assets/images/cart.svg', center, no-repeat, cover, 60px, 60px);
+        }
+    }
+}
