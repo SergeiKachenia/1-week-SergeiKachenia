@@ -1,0 +1,71 @@
+.header {
+    height: 100px;
+    width: 1785px / 1920px * 100%;
+    margin: $center;
+    @include flex(row, space-between, center);
+    .header__logo {
+        @include backgroundImage('../../assets/images/Logo.jpg', center, no-repeat, cover, 100px, 100px);
+        margin-right: -5px;
+    }
+    .header__burger-menu {
+        @include backgroundImage('../../assets/images/burger menu.svg', center, no-repeat, cover, 56px, 56px);
+    }
+    .header__nav {
+        @include flex(row, space-around, center);
+        width: 665px / 1785px * 100%;
+        margin-left: -45px;
+        margin-right: 15px;
+        .header__nav-item {
+            @include font(1rem, 700, 144%, center, 1, $secondaryTextColor, 0.07rem);
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+    .header__callback {
+        @include font(0.875rem, 700, 122%, center, 1, $quaternaryTextColor, 0.04rem);
+        text-transform: uppercase;
+        border-bottom: 1px dashed $quaternaryTextColor;
+        padding: 0 0 5px 0;
+        margin-top: 10px;
+    }
+    .header__tel {
+        @include font(1rem, 400, 122%, center, 1, $secondaryTextColor, 0.08em);
+        margin-right: 20px;
+        .header__span-tel {
+            color: $primaryTextColor;
+            font-weight: 600;
+        }
+    }
+    .header__links {
+        @include flex(row, space-between, center);
+        .header__link-vk {
+            @include backgroundImage('../../assets/images/vk.svg', center, no-repeat, cover, 20px, 20px);
+            margin-right: 12px;
+        }
+        .header__link-telegram {
+            @include backgroundImage('../../assets/images/telegram.svg', center, no-repeat, cover, 20px, 20px);
+            margin-right: 12px;
+        }
+        .header__link-instagram {
+            @include backgroundImage('../../assets/images/instagram.svg', center, no-repeat, cover, 20px, 20px);
+            margin-right: 12px;
+        }
+        .header__link-whatsapp {
+            @include backgroundImage('../../assets/images/whatsapp.svg', center, no-repeat, cover, 20px, 20px);
+        }
+    }
+    .header__buttons {
+        @include flex(row, space-between, center);
+        .header__button_search {
+            @include backgroundImage('../../assets/images/search.svg', center, no-repeat, cover, 60px, 60px);
+            margin-right: 16px;
+        }
+        .header__button_like {
+            @include backgroundImage('../../assets/images/like.svg', center, no-repeat, cover, 60px, 60px);
+            margin-right: 16px;
+        }
+        .header__button_orders {
+            @include backgroundImage('../../assets/images/cart.svg', center, no-repeat, cover, 60px, 60px);
+        }
+    }
+}

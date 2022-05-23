@@ -1,0 +1,43 @@
+@mixin list {
+    list-style-type: none;
+}
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($templateColumns, $templateRows, $row-gap, $column-gap) {
+    display: grid;
+    grid-template-columns: $templateColumns;
+    grid-template-rows: $templateRows;
+    row-gap: $row-gap;
+    column-gap: $column-gap;
+}
+
+@mixin backgroundImage($url, $position, $repeat, $fit, $width, $height) {
+    background-image: url('#{$url}');
+    background-position: $position;
+    background-repeat: $repeat;
+    object-fit: $fit;
+    width: $width;
+    height: $height;
+}
+
+@mixin font ($size,
+$fontWeight,
+$lineHeight,
+$textAlign,
+$opacity,
+$color,
+$letter-spacing) {
+    font-size: $size;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    text-align: $textAlign;
+    opacity: $opacity;
+    color: $color;
+    letter-spacing: $letter-spacing;
+}

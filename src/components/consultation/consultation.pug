@@ -1,0 +1,13 @@
+include ../../views/helpers/mixins
+
+section.consultation
+  h2.consultation__heading Необходима консультация?
+  p.consultation__description оставьте заявку или свяжитесь с&nbsp;нами в&nbsp;социальных сетях
+  div.consultation__links
+    +consultation__links
+  form.form
+    p.form__description Для <span class='form__description-span'>консультации</span> заполните форму!
+    p.form__callback-text С&nbsp;Вами свяжутся в&nbsp;ближайшее время
+    input.form__input(type='text', placeholder='Ваше имя')
+    input.form__input(type="tel", placeholder='Ваш телефон')
+    button.form__button(type='submit') Отправить

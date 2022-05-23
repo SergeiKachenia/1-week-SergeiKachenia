@@ -1,0 +1,23 @@
+@mixin fonts($path, $ffamily, $weight) {
+    @font-face {
+        src: url('#{$path}.ttf') format('tff');
+        font-family: '#{$ffamily}';
+        font-weight: $weight;
+    }
+}
+
+@include fonts('../../assets/fonts/Montserrat-Regular',
+'Montserrat',
+400);
+@include fonts('../../assets/fonts/Montserrat-Medium',
+'Montserrat',
+500);
+@include fonts('../../assets/fonts/Montserrat-SemiBold',
+'Montserrat',
+600);
+@include fonts('../../assets/fonts/Montserrat-Bold',
+'Montserrat',
+700);
+@include fonts('../../assets/fonts/Montserrat-ExtraBold',
+'Montserrat',
+800);

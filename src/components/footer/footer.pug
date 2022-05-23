@@ -1,0 +1,20 @@
+include ../../views/helpers/mixins
+
+
+footer.footer
+  section.footer__content
+    section.footer__content-catalog
+      h3.footer__heading Каталог
+      nav.catalog
+        +footer__catalog
+    section.footer__content-info
+      h3.footer__heading Информация
+      nav.info
+        +footer__info
+    section.footer__content-wh
+      h3.footer__heading Время работы
+      div.working-hours
+        div.working-hours__hours <img src='../../assets/images/wall-clock 1.svg' width='15' height='15' >&nbsp;&nbsp;<span class='working-hours__span-hours'>пн-пт</span> 9:00 – 20:00  <span class='working-hours__span-hours'>сб-вс</span> 10:00 – 18:00
+        div.working-hours__address <img src='../../assets/images/placeholder 1.svg' width='17' height='17'>&nbsp;&nbsp;г. Санкт-Петербург ,ул. Тамбасова д.7
+        nav.working-hours__links
+          +footer__links
