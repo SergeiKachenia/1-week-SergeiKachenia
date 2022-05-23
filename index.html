@@ -9,8 +9,9 @@
   </head>
   <body>
     <main class="main">
-      <header class="header">
-        <section class="header__logo"></section><a class="header__burger-menu"></a>
+      <header class="header"><a class="header__logo-link" href="#" target="_blank">
+          <div class="header__logo"></div></a>
+        <button class="header__burger-menu" type="button"></button>
         <nav class="header__nav"><a class="header__nav-item" href="#" target="_blank">Каталог товаров</a><a class="header__nav-item" href="#" target="_blank">Доставка и оплата</a><a class="header__nav-item" href="#" target="_blank">Цены</a><a class="header__nav-item" href="#" target="_blank">Контакты</a>
         </nav>
         <div class="header__tel">+7 (812)  <span class="header__span-tel">509 21 98</span></div>
@@ -20,7 +21,7 @@
         <div class="header__buttons"><a class="header__button_search" href="#" target="_blank"></a><a class="header__button_like" href="#" target="_blank"></a><a class="header__button_orders" href="#" target="_blank"></a>
         </div>
       </header>
-      <section class="article">
+      <section class="article container">
         <h1 class="article__heading">Монтаж дымоходов</h1>
         <section class="breadcrumbs">
           <div class="breadcrumbs__content">Главная <span class="breadcrumbs__last-crumb"> &gt; Монтаж дымоходов</span></div>
@@ -37,10 +38,10 @@
                   <li class="head-content__list-item">Только русские квалифицированные специалисты</li>
                   <li class="head-content__list-item">Устанавливаем любые дымоходы всех производителей</li>
                 </ul>
-          <div class="head-content__image"><img class="head-content__flue" src="assets/images/flue.svg"></div>
+          <div class="head-content__image"><img class="head-content__flue" src="assets/images/flue.png" alt="дымоход"></div>
         </div>
       </section>
-      <section class="process">
+      <section class="process container">
         <div class="process__rectangle"></div>
         <h2 class="process__heading">Процесс выполнения монтажа</h2>
               <ul class="process__list">
@@ -52,7 +53,7 @@
                 <li class="process__list-item"><span class="process__number">6</span> Гарантийное обслуживание по соответствующем сроку</li>
               </ul>
       </section>
-      <section class="why">
+      <section class="why container">
         <div class="why__rectangle"></div>
         <h2 class="why__heading">Почему Дымоход.ру?</h2>
         <p class="why__description">В&nbsp;отличие от&nbsp;других производителей, мы&nbsp;ручаемся за&nbsp;качество продукции, т.к. все Дымоходы изготавливаются из&nbsp;качественной стали, проверенного теплоизолятора, по&nbsp;современной технологии плазменной сварки &laquo;встык&raquo;</p>
@@ -78,7 +79,7 @@
                 </div>
               </div>
       </section>
-      <section class="consultation">
+      <section class="consultation container">
         <h2 class="consultation__heading">Необходима консультация?</h2>
         <p class="consultation__description">оставьте заявку или свяжитесь с&nbsp;нами в&nbsp;социальных сетях</p>
         <div class="consultation__links"><a class="consultation__link-vk" href="#" target="_blank"></a><a class="consultation__link-telegram" href="#" target="_blank"></a><a class="consultation__link-instagram" href="#" target="_blank"></a><a class="consultation__link-whatsapp" href="#" target="_blank"></a>
@@ -86,12 +87,12 @@
         <form class="form">
           <p class="form__description">Для <span class='form__description-span'>консультации</span> заполните форму!</p>
           <p class="form__callback-text">С&nbsp;Вами свяжутся в&nbsp;ближайшее время</p>
-          <input class="form__input" type="text" placeholder="Ваше имя">
+          <input class="form__input" type="text" placeholder="Ваше имя" minlength="2" maxlength="40">
           <input class="form__input" type="tel" placeholder="Ваш телефон">
           <button class="form__button" type="submit">Отправить</button>
         </form>
       </section>
-      <section class="installation">
+      <section class="installation container">
         <div class="installation__rectangle"></div>
         <h2 class="installation__heading">Видео об&nbsp;установке</h2>
         <p class="installation__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat. Duis aute irure dolor in&nbsp;reprehenderit in&nbsp;voluptate velit esse cillum dolore eu&nbsp;fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in&nbsp;culpa qui officia deserunt mollit anim id&nbsp;est laborum.</p>
@@ -101,17 +102,25 @@
           </div>
         </div>
       </section>
-      <section class="examples">
+      <section class="examples container">
         <div class="examples__rectangle"></div>
         <h2 class="examples__heading">Фото выполненных работ</h2>
         <p class="examples__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat. Duis aute irure dolor in&nbsp;reprehenderit in&nbsp;voluptate velit esse cillum dolore eu&nbsp;fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in&nbsp;culpa qui officia deserunt mollit anim id&nbsp;est laborum.</p>
-        <div class="grid-container"><img class="grid-container__item" src="assets/images/examples/img.png" alt="стена"><img class="grid-container__item" src="assets/images/examples/img (1).png" alt="печка"><img class="grid-container__item" src="assets/images/examples/img (2).png" alt="дымоход"><img class="grid-container__item" src="assets/images/examples/img (3).png" alt="дымоход"><img class="grid-container__item" src="assets/images/examples/img (4).png" alt="камин"><img class="grid-container__item" src="assets/images/examples/img (5).png" alt="печка"><img class="grid-container__item" src="assets/images/examples/img (6).png" alt="крыша"><img class="grid-container__item" src="assets/images/examples/img (7).png" alt="дымоход">
-        </div>
+        <ul class="grid-container">
+                <li class="grid-container__item"><a class="grid-container__link" href="#"><img class="grid-container__img" src="assets/images/examples/img-example(1).jpg" alt="стена"></a></li>
+                <li class="grid-container__item"><a class="grid-container__link" href="#"><img class="grid-container__img" src="assets/images/examples/img-example(2).jpg" alt="стена"></a></li>
+                <li class="grid-container__item"><a class="grid-container__link" href="#"><img class="grid-container__img" src="assets/images/examples/img-example(3).jpg" alt="стена"></a></li>
+                <li class="grid-container__item"><a class="grid-container__link" href="#"><img class="grid-container__img" src="assets/images/examples/img-example(4).jpg" alt="стена"></a></li>
+                <li class="grid-container__item"><a class="grid-container__link" href="#"><img class="grid-container__img" src="assets/images/examples/img-example(5).jpg" alt="стена"></a></li>
+                <li class="grid-container__item"><a class="grid-container__link" href="#"><img class="grid-container__img" src="assets/images/examples/img-example(6).jpg" alt="стена"></a></li>
+                <li class="grid-container__item"><a class="grid-container__link" href="#"><img class="grid-container__img" src="assets/images/examples/img-example(7).jpg" alt="стена"></a></li>
+                <li class="grid-container__item"><a class="grid-container__link" href="#"><img class="grid-container__img" src="assets/images/examples/img-example(8).png" alt="стена"></a></li>
+        </ul>
       </section>
       <footer class="footer">
-        <section class="footer__content">
+        <section class="footer__content container">
           <section class="footer__content-catalog">
-            <h3 class="footer__heading">Каталог</h3>
+            <h3 class="footer__heading heading-catalog">Каталог</h3>
             <nav class="catalog"><a class="catalog__item" href="#" target="_blank">Дымоходы</a><a class="catalog__item" href="#" target="_blank">Дымососы</a><a class="catalog__item" href="#" target="_blank">Печи для дома</a><a class="catalog__item" href="#" target="_blank">Печи для бани</a><a class="catalog__item" href="#" target="_blank">Камины</a><a class="catalog__item" href="#" target="_blank">Силикат кальция</a><a class="catalog__item" href="#" target="_blank">Котлы</a><a class="catalog__item" href="#" target="_blank"> Ещё</a>
             </nav>
           </section>
@@ -121,10 +130,10 @@
             </nav>
           </section>
           <section class="footer__content-wh">
-            <h3 class="footer__heading">Время работы</h3>
+            <h3 class="footer__heading heading-wh">Время работы</h3>
             <div class="working-hours">
-              <div class="working-hours__hours"><img src='assets/images/wall-clock 1.svg' width='15' height='15' >&nbsp;&nbsp;<span class='working-hours__span-hours'>пн-пт</span> 9:00 – 20:00  <span class='working-hours__span-hours'>сб-вс</span> 10:00 – 18:00</div>
-              <div class="working-hours__address"><img src='assets/images/placeholder 1.svg' width='17' height='17'>&nbsp;&nbsp;г. Санкт-Петербург ,ул. Тамбасова д.7</div>
+              <div class="working-hours__hours"><img src='assets/images/wall-clock.svg' width='15' height='15' alt='часы'>&nbsp;&nbsp;<span class='working-hours__span-hours'>пн-пт</span> 9:00 – 20:00  <span class='working-hours__span-hours'>сб-вс</span> 10:00 – 18:00</div>
+              <div class="working-hours__address"><img src='assets/images/placeholder.svg' width='17' height='17' alt='маркер'>&nbsp;&nbsp;г. Санкт-Петербург ,ул. Тамбасова д.7</div>
               <nav class="working-hours__links"><a class="working-hours__link-vk" href="#" target="_blank"></a><a class="working-hours__link-telegram" href="#" target="_blank"></a><a class="working-hours__link-instagram" href="#" target="_blank"></a><a class="working-hours__link-whatsapp" href="#" target="_blank"></a>
               </nav>
             </div>
