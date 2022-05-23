@@ -1,5 +1,5 @@
 .process {
-    width: 64%;
+    width: $width1920block;
     margin: $center;
     @include flex(column, flex-start, flex-start);
     .process__rectangle {
@@ -7,26 +7,23 @@
         margin: 0 0 12px 0;
     }
     .process__heading {
-        @include font(2.5rem, 700, 122%, center, 1, $primaryTextColor);
-        margin: 0 0 40px 0;
-        letter-spacing: 0.14rem;
+        @include font(2.5rem, 700, 122%, center, 1, $primaryTextColor, 0.14rem);
+        margin: 0 0 50px 0;
+    }
+    .process__list {
+        @include grid(1fr 1fr, 1fr 1fr 1fr, 10px, 40px);
+        padding: 0;
+        margin: 0 0 90px 0;
+        .process__list-item {
+            @include font(1rem, 400, 188%, start, 1, $primaryTextColor, 0.07rem);
+            list-style-type: none;
+            @include flex(row, flex-start, center);
+            align-items: center;
+        }
     }
 }
 
-.list__number {
-    @include font(4.375rem, 700, 122%, start, 0.2, $fifthTextColor);
+.process__number {
+    @include font(4.375rem, 700, 122%, start, 0.2, $fifthTextColor, 0);
     margin-right: 30px;
-}
-
-.process__list-item {
-    @include font(1rem, 400, 188%, start, 1, $primaryTextColor);
-    letter-spacing: 0.07rem;
-    list-style-type: none;
-    @include flex(row, flex-start, center);
-    align-items: center;
-}
-
-.process__list {
-    @include grid(1fr 1fr, 1fr 1fr 1fr, 0, 15px);
-    padding: 0;
 }

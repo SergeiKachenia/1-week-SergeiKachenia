@@ -6,15 +6,18 @@
     }
 }
 
-@include fonts('../fonts/Montserrat-Regular.ttf',
+@include fonts('../../assets/fonts/Montserrat-Regular',
 'Montserrat',
 400);
-@include fonts('../fonts/Montserrat-SemiBold.ttf',
+@include fonts('../../assets/fonts/Montserrat-Medium',
+'Montserrat',
+500);
+@include fonts('../../assets/fonts/Montserrat-SemiBold',
 'Montserrat',
 600);
-@include fonts('../fonts/Montserrat-Bold.ttf',
+@include fonts('../../assets/fonts/Montserrat-Bold',
 'Montserrat',
 700);
-@include fonts('../fonts/Montserrat-ExtraBold.ttf',
+@include fonts('../../assets/fonts/Montserrat-ExtraBold',
 'Montserrat',
 800);

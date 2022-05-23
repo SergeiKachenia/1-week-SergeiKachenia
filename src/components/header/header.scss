@@ -1,52 +1,56 @@
 .header {
     height: 100px;
-    margin: 33px 3% 55px 3%;
+    width: 1785px / 1920px * 100%;
+    margin: $center;
     @include flex(row, space-between, center);
     .header__logo {
         @include backgroundImage('../../assets/images/Logo.jpg', center, no-repeat, cover, 100px, 100px);
+        margin-right: -5px;
     }
     .header__burger-menu {
         @include backgroundImage('../../assets/images/burger menu.svg', center, no-repeat, cover, 56px, 56px);
     }
     .header__nav {
-        @include flex(row, space-between, center);
-        width: 35%;
+        @include flex(row, space-around, center);
+        width: 665px / 1785px * 100%;
+        margin-left: -45px;
+        margin-right: 15px;
         .header__nav-item {
-            @include font(1rem, 700, 144%, center, 1, $secondaryTextColor);
+            @include font(1rem, 700, 144%, center, 1, $secondaryTextColor, 0.07rem);
             text-transform: uppercase;
             text-decoration: none;
-            letter-spacing: 0.07rem;
         }
     }
     .header__callback {
-        @include font(0.875rem, 700, 122%, center, 1, $quaternaryTextColor);
+        @include font(0.875rem, 700, 122%, center, 1, $quaternaryTextColor, 0.04rem);
         text-transform: uppercase;
         border-bottom: 1px dashed $quaternaryTextColor;
-        padding-bottom: 5px;
-        letter-spacing: 0.04rem;
+        padding: 0 0 5px 0;
+        margin-top: 10px;
     }
     .header__tel {
-        @include font(1rem, 400, 122%, center, 1, $secondaryTextColor);
-        letter-spacing: 0.08em;
-        .header__bold-tel {
+        @include font(1rem, 400, 122%, center, 1, $secondaryTextColor, 0.08em);
+        margin-right: 20px;
+        .header__span-tel {
             color: $primaryTextColor;
+            font-weight: 600;
         }
     }
     .header__links {
         @include flex(row, space-between, center);
-        .header__link_vk {
+        .header__link-vk {
             @include backgroundImage('../../assets/images/vk.svg', center, no-repeat, cover, 20px, 20px);
             margin-right: 12px;
         }
-        .header__link_telegram {
+        .header__link-telegram {
             @include backgroundImage('../../assets/images/telegram.svg', center, no-repeat, cover, 20px, 20px);
             margin-right: 12px;
         }
-        .header__link_instagram {
+        .header__link-instagram {
             @include backgroundImage('../../assets/images/instagram.svg', center, no-repeat, cover, 20px, 20px);
             margin-right: 12px;
         }
-        .header__link_whatsapp {
+        .header__link-whatsapp {
             @include backgroundImage('../../assets/images/whatsapp.svg', center, no-repeat, cover, 20px, 20px);
         }
     }

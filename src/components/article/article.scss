@@ -1,80 +1,78 @@
 .article {
-    width: 64%;
+    width: $width1920block;
     margin: $center;
     @include flex(column, flex-start, flex-start);
     .article__heading {
-        @include font(3.75rem, 700, 122%, center, 1, $primaryTextColor);
-        margin: 0 0 40px 0;
-        letter-spacing: 0.25rem;
+        @include font(3.75rem, 700, 122%, center, 1, $primaryTextColor, 0.25rem);
+        margin: 55px 0 40px 0;
     }
     .article__description {
-        @include font(1rem, 400, 188%, start, 1, $primaryTextColor);
+        @include font(1rem, 400, 188%, start, 1, $primaryTextColor, 0.07rem);
         margin: 0 0 45px 0;
-        letter-spacing: 0.07rem;
         .article__description-span {
             color: $tertiaryTextColor;
+            font-weight: 600;
         }
     }
-    .article__breadcrumbs {
-        border-top: 1px solid #e5e5e5;
-        border-bottom: 1px solid #e5e5e5;
-        width: 100%;
-        margin-bottom: 85px;
-        .breadcrumbs__last-crumb {
-            color: $secondaryTextColor;
-        }
-        .breadcrumbs__content {
-            @include font(0.75rem, 400, 15px, start, 1, #B1B1B1);
-            padding: 14px 0 14px 0;
-            letter-spacing: 0.06rem;
+}
+
+.breadcrumbs {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    width: 100%;
+    margin-bottom: 85px;
+    .breadcrumbs__last-crumb {
+        color: $secondaryTextColor;
+    }
+    .breadcrumbs__content {
+        @include font(0.75rem, 400, 15px, start, 1, #B1B1B1, 0.06rem);
+        padding: 15px 0 15px 0;
+    }
+}
+
+.head-content {
+    @include grid(1fr 1fr, 120px 1fr, 0, 20px);
+    width: calc(100% + 165px);
+    margin: 0 0 112px 0;
+    .head-content__heading {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        margin: 0;
+        @include font(2.5rem, 600, 158%, start, 1, $primaryTextColor, 0.1rem);
+        .head-content__lorem {
+            @include font(3rem, 800, 100%, start, 1, $tertiaryTextColor, 0);
+            text-transform: uppercase;
         }
     }
-    .article__head-content {
-        @include grid(1fr 1fr, 120px 1fr, 0, 0);
-        width: calc(100% + 165px);
-        .head-content__heading {
-            grid-column-start: 1;
-            grid-row-start: 1;
-            margin: 0;
-            @include font(2.5rem, 600, 158%, start, 1, $primaryTextColor);
-            letter-spacing: 0.1rem;
-            .head-content__lorem {
-                @include font(3rem, 800, 100%, start, 1, $tertiaryTextColor);
-                text-transform: uppercase;
-                letter-spacing: 0;
+    .head-content__list {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        padding: 40px 0 0 55px;
+        margin: 0;
+        @include font(1rem, 400, 150%, start, 1, $primaryTextColor, 0.06rem);
+        .head-content__list-item {
+            margin: 0 0 20px 0;
+            &::marker {
+                color: $fifthTextColor;
+                font-size: 1.625rem;
+            }
+            &:last-child {
+                margin: 0;
             }
         }
-        .head-content__list {
-            grid-column-start: 1;
-            grid-row-start: 2;
-            padding: 40px 0 0 50px;
-            margin: 0 0 115px 0;
-            @include font(1rem, 400, 150%, start, 1, $primaryTextColor);
-            letter-spacing: 0.06rem;
-            .head-content__list-item {
-                margin-bottom: 20px;
-                &::marker {
-                    color: $fifthTextColor;
-                    font-size: 1.625rem;
-                }
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-        .head-content__image {
-            @include backgroundImage('../../assets/images/Group head-content.jpg', center, no-repeat, cover, 800px, 580px);
-            grid-column-start: 2;
-            grid-row-start: 1;
-            grid-row-end: 2;
-            position: relative;
-            .head-content__flue {
-                width: 480px;
-                height: 460px;
-                position: absolute;
-                left: 195px;
-                bottom: 140px;
-            }
+    }
+    .head-content__image {
+        @include backgroundImage('../../assets/images/Group head-content.jpg', center, no-repeat, cover, 770px, 580px);
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        position: relative;
+        .head-content__flue {
+            width: 480px;
+            height: 460px;
+            position: absolute;
+            left: 180px;
+            bottom: 140px;
         }
     }
 }

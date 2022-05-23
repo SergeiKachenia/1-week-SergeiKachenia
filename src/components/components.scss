@@ -3,6 +3,9 @@
 @import 'article/article';
 @import 'process/process';
 @import 'why/why';
+@import 'consultation/consultation';
+@import 'installation/installation';
+@import 'examples/examples';
 body {
     font-family: $fontFamily;
     margin: $center;

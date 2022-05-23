@@ -1,0 +1,60 @@
+.why {
+    width: $width1920block;
+    margin: $center;
+    .why__rectangle {
+        @include backgroundImage('../../assets/images/Rectangle 5.svg', start, no-repeat, cover, 75px, 5px);
+        margin: 0 0 12px 0;
+    }
+    .why__heading {
+        @include font(2.5rem, 600, 122%, start, 1, $primaryTextColor, 0.14rem);
+        margin: 0 0 50px 0;
+    }
+    .why__description {
+        @include font(1rem, 400, 188%, start, 1, $primaryTextColor, 0.06rem);
+        margin: 0 0 45px 0;
+    }
+}
+
+.reasons {
+    @include flex(row, space-between, center);
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+    .reasons__heading {
+        @include font(1.25rem, 700, 150%, start, 1, $primaryTextColor, 0.08rem);
+        margin: 0 0 10px 0;
+    }
+    .reasons__description {
+        @include font(1rem, 400, 188%, start, 1, $primaryTextColor, 0.04rem);
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .reasons__block {
+        @include flex(column, space-between, start);
+        width: (100% / 3);
+        margin: 0 0 95px 0;
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+.guarantee__image {
+    @include backgroundImage('../../assets/images/guarantee 1.svg', center, no-repeat, cover, 80px, 80px);
+    margin: 0 0 35px 0;
+}
+
+.help__image {
+    @include backgroundImage('../../assets/images/architect 1.svg', center, no-repeat, cover, 80px, 80px);
+    margin: 0 0 35px 0;
+}
+
+.feedback__image {
+    @include backgroundImage('../../assets/images/review 1.svg', center, no-repeat, cover, 80px, 80px);
+    margin: 0 0 35px 0;
+}
+
+.guarantee__list-span {
+    color: $tertiaryTextColor;
+    font-weight: 600;
+}

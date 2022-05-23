@@ -31,11 +31,13 @@ $fontWeight,
 $lineHeight,
 $textAlign,
 $opacity,
-$color) {
+$color,
+$letter-spacing) {
     font-size: $size;
     font-weight: $fontWeight;
     line-height: $lineHeight;
     text-align: $textAlign;
     opacity: $opacity;
     color: $color;
+    letter-spacing: $letter-spacing;
 }
