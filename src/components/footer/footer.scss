@@ -3,8 +3,6 @@
     background-color: $footerBackColor;
     color: $footerTextColor;
     .footer__content {
-        width: $width1920block;
-        margin: $center;
         @include flex(row, space-between, center);
         padding: 90px 0 100px 0;
         .footer__content-catalog {
@@ -27,7 +25,8 @@
     @include flex(column, flex-start, flex-start);
     flex-wrap: wrap;
     height: 170px;
-    column-gap: 110px;
+    column-gap: 100px;
+    margin-left: 20px;
     .catalog__item {
         text-decoration: none;
         @include font(0.875rem, 400, 122%, start, 1, $footerTextColor, 0.04rem);
@@ -51,14 +50,14 @@
     @include flex(column, flex-start, flex-start);
     height: 170px;
     .working-hours__hours {
-        @include font(0.875rem, 400, 171%, start, 1, $footerTextColor, 0.04rem);
+        @include font(0.875rem, 400, 171%, start, 1, $footerTextColor, 0.02rem);
         margin-bottom: 10px;
         .working-hours__span-hours {
             color: $secondaryTextColor;
         }
     }
     .working-hours__address {
-        @include font(0.875rem, 400, 171%, start, 1, $footerTextColor, 0.04rem);
+        @include font(0.875rem, 400, 171%, start, 1, $footerTextColor, 0.02rem);
         margin-bottom: 25px;
     }
     .working-hours__links {
@@ -68,15 +67,15 @@
             margin-right: 50px;
         }
         .working-hours__link-telegram {
-            @include backgroundImage('../../assets/images/telegram.svg', center, no-repeat, cover, 22px, 23px);
+            @include backgroundImage('../../assets/images/telegram.svg', center, no-repeat, cover, 23px, 23px);
             margin-right: 50px;
         }
         .working-hours__link-instagram {
-            @include backgroundImage('../../assets/images/instagram.svg', center, no-repeat, cover, 18px, 19px);
+            @include backgroundImage('../../assets/images/instagram.svg', center, no-repeat, cover, 23px, 23px);
             margin-right: 50px;
         }
         .working-hours__link-whatsapp {
-            @include backgroundImage('../../assets/images/whatsapp.svg', center, no-repeat, cover, 18px, 19px);
+            @include backgroundImage('../../assets/images/whatsapp.svg', center, no-repeat, cover, 23px, 23px);
         }
     }
 }
@@ -85,4 +84,12 @@
     @include font(1.375rem, 700, 122%, start, 1, $footerTextColor, 0.06rem);
     margin: 0 0 20px 0;
     text-transform: uppercase;
+}
+
+.heading-catalog {
+    margin-left: 20px;
+}
+
+.heading-wh {
+    margin: 0 0 15px 0;
 }

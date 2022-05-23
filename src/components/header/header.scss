@@ -2,6 +2,7 @@
     height: 100px;
     width: 1785px / 1920px * 100%;
     margin: $center;
+    max-width: 1785px;
     @include flex(row, space-between, center);
     .header__logo {
         @include backgroundImage('../../assets/images/Logo.jpg', center, no-repeat, cover, 100px, 100px);
@@ -9,6 +10,8 @@
     }
     .header__burger-menu {
         @include backgroundImage('../../assets/images/burger menu.svg', center, no-repeat, cover, 56px, 56px);
+        border: none;
+        background-color: $footerTextColor;
     }
     .header__nav {
         @include flex(row, space-around, center);

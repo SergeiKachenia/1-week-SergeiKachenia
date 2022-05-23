@@ -1,25 +1,50 @@
 .examples {
-    width: $width1920block;
-    margin: $center;
     .examples__rectangle {
-        @include backgroundImage('../../assets/images/Rectangle 5.svg', start, no-repeat, cover, 75px, 5px);
-        margin: 175px 0 12px 0;
+        @include backgroundImage('../../assets/images/Rectangle.svg', start, no-repeat, cover, 75px, 5px);
+        margin: 175px 0 12px 5px;
     }
     .examples__heading {
         @include font(2.5rem, 600, 122%, start, 1, $primaryTextColor, 0.1rem);
-        margin: 0 0 65px 0;
+        margin: 0 0 70px 5px;
     }
     .examples__description {
         @include font(1rem, 400, 188%, start, 1, $primaryTextColor, 0.06rem);
-        margin: 0 0 40px 0;
+        margin: 0 0 45px 5px;
     }
 }
 
 .grid-container {
-    @include grid(repeat(auto-fit, minmax(282px, 1fr)), auto, 20px, 10px);
-    margin: 0 0 120px 0;
+    @include grid(repeat(auto-fit, minmax(282px, 1fr)), auto, 30px, 30px);
+    margin: 0 0 125px 0;
     .grid-container__item {
         width: 100%;
         object-fit: cover;
+        position: relative;
+        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
+        list-style-type: none;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            border-top: 4px solid $secondaryTextColor;
+            border-right: 4px solid $secondaryTextColor;
+            color: transparent;
+            box-sizing: border-box;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-left: 4px solid $secondaryTextColor;
+            border-bottom: 4px solid $secondaryTextColor;
+            color: transparent;
+            box-sizing: border-box;
+        }
     }
 }

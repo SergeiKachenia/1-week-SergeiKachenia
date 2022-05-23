@@ -1,0 +1,50 @@
+*,
+**::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1920px;
+    min-width: 320px;
+}
+
+.main {
+    background: #fff;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+button {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3 ease;
+}
+
+.container {
+    max-width: 1248px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}

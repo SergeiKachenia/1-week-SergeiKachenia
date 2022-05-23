@@ -1,9 +1,7 @@
 .installation {
-    width: $width1920block;
-    margin: $center;
     .installation__rectangle {
-        @include backgroundImage('../../assets/images/Rectangle 5.svg', start, no-repeat, cover, 75px, 5px);
-        margin: 0 0 12px 0;
+        @include backgroundImage('../../assets/images/Rectangle.svg', start, no-repeat, cover, 75px, 5px);
+        margin: 0 0 12px 5px;
     }
     .installation__background {
         @include backgroundImage('../../assets/images/Group installation.jpg', center, no-repeat, cover, 1186px, 416px);
@@ -16,7 +14,7 @@
     }
     .installation__description {
         @include font(1rem, 400, 188%, start, 1, $primaryTextColor, 0.06rem);
-        margin: 0 0 45px 0;
+        margin: 0 0 45px 5px;
     }
     .installation__relative-container {
         height: 0;
