@@ -1,14 +1,12 @@
 .process {
-    width: $width1920block;
-    margin: $center;
     @include flex(column, flex-start, flex-start);
     .process__rectangle {
-        @include backgroundImage('../../assets/images/Rectangle 5.svg', start, no-repeat, cover, 75px, 5px);
-        margin: 0 0 12px 0;
+        @include backgroundImage('../../assets/images/Rectangle.svg', start, no-repeat, cover, 75px, 5px);
+        margin: 0 0 12px 5px;
     }
     .process__heading {
         @include font(2.5rem, 700, 122%, center, 1, $primaryTextColor, 0.14rem);
-        margin: 0 0 50px 0;
+        margin: 0 0 51px 5px;
     }
     .process__list {
         @include grid(1fr 1fr, 1fr 1fr 1fr, 10px, 40px);
@@ -25,5 +23,5 @@
 
 .process__number {
     @include font(4.375rem, 700, 122%, start, 0.2, $fifthTextColor, 0);
-    margin-right: 30px;
+    margin-right: 35px;
 }

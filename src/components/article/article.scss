@@ -1,14 +1,12 @@
 .article {
-    width: $width1920block;
-    margin: $center;
     @include flex(column, flex-start, flex-start);
     .article__heading {
         @include font(3.75rem, 700, 122%, center, 1, $primaryTextColor, 0.25rem);
-        margin: 55px 0 40px 0;
+        margin: 55px 0 40px 10px;
     }
     .article__description {
         @include font(1rem, 400, 188%, start, 1, $primaryTextColor, 0.07rem);
-        margin: 0 0 45px 0;
+        margin: 0 0 45px 5px;
         .article__description-span {
             color: $tertiaryTextColor;
             font-weight: 600;
@@ -20,7 +18,7 @@
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
     width: 100%;
-    margin-bottom: 85px;
+    margin-bottom: 84px;
     .breadcrumbs__last-crumb {
         color: $secondaryTextColor;
     }
@@ -49,6 +47,7 @@
         grid-row-start: 2;
         padding: 40px 0 0 55px;
         margin: 0;
+        list-style-type: disc;
         @include font(1rem, 400, 150%, start, 1, $primaryTextColor, 0.06rem);
         .head-content__list-item {
             margin: 0 0 20px 0;
@@ -62,7 +61,7 @@
         }
     }
     .head-content__image {
-        @include backgroundImage('../../assets/images/Group head-content.jpg', center, no-repeat, cover, 770px, 580px);
+        @include backgroundImage('../../assets/images/group-head-content.svg', center, no-repeat, cover, 770px, 580px);
         grid-column-start: 2;
         grid-row-start: 1;
         grid-row-end: 2;
