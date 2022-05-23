@@ -8,15 +8,15 @@
         @include flex(row, space-between, center);
         padding: 90px 0 100px 0;
         .footer__content-catalog {
-            @include flex(column, flex-start, start);
+            @include flex(column, flex-start, flex-start);
             width: 343px / 1218px * 100%;
         }
         .footer__content-info {
-            @include flex(column, flex-start, start);
+            @include flex(column, flex-start, flex-start);
             width: 343px / 1218px * 100%;
         }
         .footer__content-wh {
-            @include flex(column, flex-start, start);
+            @include flex(column, flex-start, flex-start);
             width: 343px / 1218px * 100%;
             margin-right: -35px;
         }
@@ -24,7 +24,7 @@
 }
 
 .catalog {
-    @include flex(column, flex-start, start);
+    @include flex(column, flex-start, flex-start);
     flex-wrap: wrap;
     height: 170px;
     column-gap: 110px;
@@ -36,7 +36,7 @@
 }
 
 .info {
-    @include flex(column, flex-start, start);
+    @include flex(column, flex-start, flex-start);
     flex-wrap: wrap;
     height: 170px;
     column-gap: 55px;
@@ -48,7 +48,7 @@
 }
 
 .working-hours {
-    @include flex(column, flex-start, start);
+    @include flex(column, flex-start, flex-start);
     height: 170px;
     .working-hours__hours {
         @include font(0.875rem, 400, 171%, start, 1, $footerTextColor, 0.04rem);

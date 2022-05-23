@@ -31,7 +31,7 @@
         margin: 0;
     }
     .reasons__block {
-        @include flex(column, space-between, start);
+        @include flex(column, space-between, flex-start);
         width: (100% / 3);
         margin: 0 0 95px 0;
         list-style-type: none;
