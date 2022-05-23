@@ -6,3 +6,4 @@
 3. SCSS
 
 ### Данный проект доступен по [ссылке](https://sergeikachenia.github.io/1-week-SergeiKachenia/) на GH-Pages
+Update: Пока не доступен:)
