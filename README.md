@@ -2,7 +2,7 @@
 
 ### Использованы технологии:
 1. Препроцессор Pug
-2. Сборщик Gulp (+ EsLint, styleLint, PostCSS) 
+2. Сборщик Gulp (+ EsLint, styleLint, PostCSS, Babel) 
 3. SCSS
 
 ### Данный проект доступен по [ссылке](https://sergeikachenia.github.io/1-week-SergeiKachenia/) на GH-Pages
