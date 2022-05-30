@@ -73,3 +73,120 @@
         padding: 0;
     }
 }
+
+@media screen and (max-width: $desktopSmall) {
+    .consultation {
+        .consultation__heading {
+            font-size: 2.5rem;
+            margin: 0 0 12px 0;
+            line-height: 75%;
+        }
+        .consultation__description {
+            font-size: 1.25rem;
+            margin: 0 0 20px 0;
+        }
+    }
+    .form {
+        @include flex(column, flex-start, center);
+        max-width: 100%;
+        height: 390px;
+        margin: 0 auto 58px;
+        gap: 15px;
+        .form__description {
+            padding: 50px 0 0 0;
+            text-align: center;
+        }
+        .form__callback-text {
+            text-align: center;
+            padding: 0 0 20px 0;
+        }
+        .form__input[type='text'] {
+            margin: 0;
+        }
+        .form__input {
+            width: 350px;
+            margin: 0;
+        }
+        .form__button {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: ($tablet + 100px)) {
+    .consultation {
+        .consultation__heading {
+            font-size: 2.375rem;
+            margin: 0 0 12px 0;
+            line-height: 75%;
+        }
+        .consultation__description {
+            font-size: 1rem;
+            margin: 0 0 25px 0;
+        }
+        .consultation__links {
+            margin: 0 0 35px 0;
+        }
+    }
+    .form {
+        @include flex(column, flex-start, center);
+        gap: 0;
+        .form__description {
+            padding: 48px 0 0 0;
+            letter-spacing: 0.1rem;
+            margin-bottom: 15px;
+        }
+        .form__callback-text {
+            padding: 0 0 18px 0;
+        }
+        .form__input[type='text'] {
+            margin: 0 0 15px 0;
+        }
+        .form__input {
+            width: 350px;
+            margin: 0 0 15px 0;
+        }
+    }
+}
+
+@media screen and (max-width: ($mobile + 100px)) {
+    .consultation {
+        .consultation__heading {
+            font-size: 1.375rem;
+            margin: 0 0 2px 0;
+            line-height: 136%;
+        }
+        .consultation__description {
+            font-size: 0.875rem;
+            margin: 0 0 23px 0;
+        }
+        .consultation__links {
+            margin: 0 0 21px 0;
+        }
+    }
+    .form {
+        @include flex(column, flex-start, center);
+        gap: 0;
+        box-shadow: none;
+        border-top: 1px solid #e5e5e5;
+        margin: 0 auto 2px;
+        .form__description {
+            padding: 25px 0 0 0;
+            margin-bottom: 12px;
+            font-size: 1.0625rem;
+            line-height: 144%;
+        }
+        .form__callback-text {
+            font-size: 0.875rem;
+            line-height: 179%;
+            padding: 0 0 27px 0;
+        }
+        .form__input[type='text'] {
+            margin: 0 0 15px 0;
+        }
+        .form__input {
+            width: 290px;
+            margin: 0 0 15px 0;
+        }
+    }
+}

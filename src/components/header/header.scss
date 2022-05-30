@@ -72,3 +72,92 @@
         }
     }
 }
+
+@media screen and (max-width: $desktopSmall) {
+    .header {
+        max-width: 1190px;
+        .header__logo {
+            @include backgroundImage('../../assets/images/Logo768.png', center, no-repeat, cover, 64px, 62px);
+        }
+        .header__nav {
+            margin-right: 0;
+            margin-left: 0;
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: ($tablet + 100px)) {
+    .header {
+        height: 105px;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 738px;
+        border-bottom: 1px solid #e5e5e5;
+        .header__logo-link {
+            margin-right: 50%;
+        }
+        .header__logo {
+            order: 1;
+        }
+        .header__burger-menu {
+            order: 3;
+        }
+        .header__nav {
+            margin-right: 0;
+            margin-left: 0;
+            display: none;
+        }
+        .header__links {
+            display: none;
+        }
+        .header__tel {
+            display: none;
+        }
+        .header__callback {
+            display: none;
+        }
+        .header__buttons {
+            .header__button_search {
+                @include backgroundImage('../../assets/images/search.svg', center, no-repeat, cover, 60px, 60px);
+                margin-right: 24px;
+            }
+            .header__button_like {
+                @include backgroundImage('../../assets/images/like.svg', center, no-repeat, cover, 60px, 60px);
+                margin-right: 24px;
+            }
+            .header__button_orders {
+                @include backgroundImage('../../assets/images/cart.svg', center, no-repeat, cover, 60px, 60px);
+                margin-right: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: ($mobile + 100px)) {
+    .header {
+        height: 70px;
+        max-width: 290px;
+        .header__logo-link {
+            margin-right: 47%;
+            .header__logo {
+                @include backgroundImage('../../assets/images/Logo320.png', center, no-repeat, cover, 48px, 47px);
+            }
+        }
+        .header__burger-menu {
+            @include backgroundImage('../../assets/images/burger-menu320.svg', center, no-repeat, cover, 44px, 44px);
+        }
+        .header__buttons {
+            .header__button_search {
+                display: none;
+            }
+            .header__button_like {
+                display: none;
+            }
+            .header__button_orders {
+                @include backgroundImage('../../assets/images/cart320.svg', center, no-repeat, cover, 50px, 44px);
+                margin-right: 16px;
+            }
+        }
+    }
+}

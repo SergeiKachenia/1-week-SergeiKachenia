@@ -5,16 +5,17 @@
         margin: 0 0 12px 5px;
     }
     .process__heading {
-        @include font(2.5rem, 700, 122%, center, 1, $primaryTextColor, 0.14rem);
+        @include font(2.5rem, 700, 122%, start, 1, $primaryTextColor, 0.14rem);
         margin: 0 0 51px 5px;
     }
     .process__list {
         @include grid(1fr 1fr, 1fr 1fr 1fr, 10px, 40px);
         padding: 0;
         margin: 0 0 90px 0;
+        grid-auto-flow: column;
         .process__list-item {
             @include font(1rem, 400, 188%, start, 1, $primaryTextColor, 0.07rem);
-            list-style-type: none;
+            @include list;
             @include flex(row, flex-start, center);
             align-items: center;
         }
@@ -24,4 +25,57 @@
 .process__number {
     @include font(4.375rem, 700, 122%, start, 0.2, $fifthTextColor, 0);
     margin-right: 35px;
+}
+
+@media screen and (max-width: $desktopSmall) {
+    .process {
+        .process__heading {
+            font-size: 1.875rem;
+            margin: 0 0 22px 5px;
+        }
+        .process__list {
+            margin: 0 0 61px 0;
+            .process__list-item {
+                font-size: 0.875rem;
+                line-height: 186%;
+                letter-spacing: 0.06rem;
+            }
+        }
+    }
+    .process__number {
+        font-size: 3.125rem;
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: ($tablet + 100px)) {
+    .process {
+        .process__heading {
+            margin: 0 0 22px 0;
+        }
+        .process__rectangle {
+            margin: 0 0 12px 0;
+        }
+        .process__heading {
+            margin: 0 0 22px 0;
+        }
+    }
+}
+
+@media screen and (max-width: ($mobile + 100px)) {
+    .process {
+        .process__heading {
+            font-size: 1.25rem;
+            line-height: 150%;
+            margin: 0 0 11px 0;
+        }
+        .process__list {
+            @include grid(1fr, repeat(6, auto), 10px, 0);
+            margin: 0 0 55px 0;
+        }
+    }
+    .process__number {
+        font-size: 3.125rem;
+        margin-right: 15px;
+    }
 }

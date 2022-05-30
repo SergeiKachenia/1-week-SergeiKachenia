@@ -17,11 +17,11 @@
     @include grid(repeat(auto-fit, minmax(282px, 1fr)), auto, 30px, 30px);
     margin: 0 0 125px 0;
     .grid-container__item {
-        width: 100%;
+        width: fit-content;
         object-fit: cover;
         position: relative;
         filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15));
-        list-style-type: none;
+        @include list;
         &::before {
             content: '';
             position: absolute;
@@ -45,6 +45,87 @@
             border-bottom: 4px solid $secondaryTextColor;
             color: transparent;
             box-sizing: border-box;
+        }
+    }
+    .grid-container__img {
+        width: 282px;
+    }
+}
+
+@media screen and (max-width: $desktopSmall) {
+    .examples {
+        .examples__rectangle {
+            margin: 55px 0 12px 5px;
+        }
+        .examples__heading {
+            font-size: 1.875rem;
+            margin: 0 0 35px 5px;
+        }
+        .examples__description {
+            margin: 0 0 35px 5px;
+        }
+    }
+    .grid-container {
+        @include grid(repeat(auto-fit, minmax(226px, 1fr)), auto, 30px, 30px);
+        margin: 0 0 65px 0;
+        .grid-container__img {
+            width: 226px;
+        }
+    }
+}
+
+@media screen and (max-width: ($tablet + 100px)) {
+    .examples {
+        .examples__rectangle {
+            margin: 58px 0 12px 0;
+        }
+        .examples__heading {
+            margin: 0 0 35px 0;
+        }
+        .examples__description {
+            margin: 0 0 35px 0;
+        }
+    }
+    .grid-container {
+        margin: 0 0 40px 0;
+    }
+}
+
+@media screen and (max-width: ($mobile + 100px)) {
+    .examples {
+        .examples__rectangle {
+            margin: 48px 0 12px 0;
+        }
+        .examples__heading {
+            font-size: 1.125rem;
+            line-height: 150%;
+            margin: 0 0 16px 0;
+        }
+        .examples__description {
+            margin: 0 0 10px 0;
+            font-size: 0.875rem;
+            line-height: 186%;
+        }
+    }
+    .grid-container {
+        margin: 0 0 45px 0;
+        @include grid(repeat(auto-fit, minmax(130px, 1fr)), auto, 16px, 30px);
+        .grid-container__item {
+            &::before {
+                width: 30px;
+                height: 30px;
+                border-top: 2px solid $secondaryTextColor;
+                border-right: 2px solid $secondaryTextColor;
+            }
+            &::after {
+                width: 30px;
+                height: 30px;
+                border-left: 2px solid $secondaryTextColor;
+                border-bottom: 2px solid $secondaryTextColor;
+            }
+            .grid-container__img {
+                width: 130px;
+            }
         }
     }
 }

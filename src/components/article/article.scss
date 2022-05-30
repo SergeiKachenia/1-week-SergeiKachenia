@@ -1,7 +1,7 @@
 .article {
     @include flex(column, flex-start, flex-start);
     .article__heading {
-        @include font(3.75rem, 700, 122%, center, 1, $primaryTextColor, 0.25rem);
+        @include font(3.75rem, 700, 122%, start, 1, $primaryTextColor, 0.25rem);
         margin: 55px 0 40px 10px;
     }
     .article__description {
@@ -72,6 +72,95 @@
             position: absolute;
             left: 180px;
             bottom: 140px;
+        }
+    }
+}
+
+@media screen and (max-width: $desktopSmall) {
+    .article {
+        .article__heading {
+            font-size: 2.8125rem;
+            margin: 45px 0 30px 10px;
+        }
+    }
+    .head-content {
+        @include grid(1fr, 101px 1fr, 0, 0);
+        width: 100%;
+        margin: 0 0 54px 0;
+        .head-content__heading {
+            font-size: 1.875rem;
+            line-height: 173%;
+            width: 60%;
+            .head-content__lorem {
+                font-size: 2.4rem;
+            }
+        }
+        .head-content__list {
+            padding: 15px 0 0 55px;
+        }
+        .head-content__image {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: ($tablet + 100px)) {
+    .article {
+        .article__heading {
+            font-size: 2.8125rem;
+            margin: 60px 0 30px 0;
+        }
+        .article__description {
+            margin: 0 0 20px 0;
+        }
+    }
+    .breadcrumbs {
+        margin-bottom: 62px;
+    }
+}
+
+@media screen and (max-width: ($mobile + 100px)) {
+    .article {
+        .article__heading {
+            font-size: 1.875rem;
+            margin: 45px 0 10px 0;
+            letter-spacing: 0.07rem;
+        }
+        .article__description {
+            font-size: 0.875rem;
+            margin: 0 0 15px 0;
+            letter-spacing: 0.04rem;
+        }
+        .head-content {
+            @include grid(1fr, 70px 1fr, 0, 0);
+            width: 100%;
+            margin: 0 0 35px 0;
+            .head-content__heading {
+                font-size: 1.125rem;
+                line-height: 206%;
+                width: 100%;
+                letter-spacing: 0.06rem;
+                .head-content__lorem {
+                    font-size: 1.75rem;
+                    letter-spacing: 0.08rem;
+                }
+            }
+            .head-content__list {
+                padding: 12px 0 0 40px;
+                font-size: 0.875rem;
+                line-height: 171%;
+                letter-spacing: 0.06rem;
+                .head-content__list-item {
+                    margin: 0 0 15px 0;
+                    &::marker {
+                        color: $fifthTextColor;
+                        font-size: 1.875rem;
+                    }
+                }
+            }
+        }
+        .breadcrumbs {
+            margin-bottom: 20px;
         }
     }
 }
