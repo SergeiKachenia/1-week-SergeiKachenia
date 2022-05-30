@@ -33,3 +33,62 @@
         margin: 50px 0 0 0;
     }
 }
+
+@media screen and (max-width: $desktopSmall) {
+    .installation {
+        .installation__heading {
+            font-size: 1.875rem;
+            margin: 0 0 35px 5px;
+        }
+        .installation__description {
+            margin: 0 0 35px 5px;
+        }
+        .installation__background {
+            background-image: none;
+        }
+        .installation__relative-container {
+            width: 100%;
+            padding-bottom: 52%;
+        }
+        .installation__relative-container iframe {
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: ($tablet + 100px)) {
+    .installation {
+        .installation__heading {
+            margin: 0 0 35px 0;
+        }
+        .installation__rectangle {
+            margin: 0 0 12px 0;
+        }
+        .installation__description {
+            margin: 0 0 31px 0;
+        }
+    }
+}
+
+@media screen and (max-width: ($mobile + 100px)) {
+    .installation {
+        .installation__heading {
+            font-size: 1.25rem;
+            line-height: 150%;
+            margin: 0 0 28px 0;
+            letter-spacing: 0.07rem;
+        }
+        .installation__description {
+            margin: 0 0 24px 0;
+            font-size: 0.875rem;
+            line-height: 186%;
+        }
+        .installation__background {
+            background-image: none;
+            height: 163px;
+        }
+        .installation__relative-container {
+            padding-bottom: 56%;
+        }
+    }
+}

@@ -48,3 +48,34 @@ a {
     padding-left: 15px;
     box-sizing: border-box;
 }
+
+@media screen and (max-width: 1281px) {
+    body {
+        max-width: 1280px;
+    }
+    .container {
+        max-width: 832px;
+    }
+}
+
+@media screen and (max-width: 869px) {
+    body {
+        max-width: 768px;
+    }
+    .container {
+        max-width: 738px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 421px) {
+    body {
+        max-width: 321px;
+    }
+    .container {
+        max-width: 290px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

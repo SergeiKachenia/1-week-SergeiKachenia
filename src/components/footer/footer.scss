@@ -2,6 +2,7 @@
     width: 100%;
     background-color: $footerBackColor;
     color: $footerTextColor;
+    box-sizing: border-box;
     .footer__content {
         @include flex(row, space-between, center);
         padding: 90px 0 100px 0;
@@ -92,4 +93,94 @@
 
 .heading-wh {
     margin: 0 0 15px 0;
+}
+
+@media screen and (max-width: $desktopSmall) {
+    .footer {
+        .footer__content {
+            padding: 50px 0 60px 0;
+        }
+    }
+    .catalog {
+        column-gap: 40px;
+        .catalog__item {
+            font-size: 0.75rem;
+            margin-bottom: 22px;
+        }
+    }
+    .info {
+        column-gap: 25px;
+        .info__item {
+            text-decoration: none;
+            font-size: 0.75rem;
+            margin-bottom: 22px;
+        }
+    }
+    .working-hours {
+        .working-hours__hours {
+            font-size: 0.75rem;
+        }
+        .working-hours__address {
+            font-size: 0.75rem;
+        }
+    }
+    .footer__heading {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: ($tablet + 100px)) {
+    .footer {
+        height: 70px;
+        .footer__content {
+            @include flex(row, center, center);
+            padding: 25px 0 25px 0;
+            .footer__content-catalog {
+                display: none;
+            }
+            .footer__content-info {
+                display: none;
+            }
+            .footer__content-wh {
+                width: fit-content;
+            }
+        }
+    }
+    .catalog {
+        display: none;
+    }
+    .info {
+        display: none;
+    }
+    .working-hours {
+        @include flex(row, center, center);
+        height: fit-content;
+        .working-hours__hours {
+            display: none;
+        }
+        .working-hours__address {
+            display: none;
+        }
+        .working-hours__links {
+            .working-hours__link-vk {
+                @include backgroundImage('../../assets/images/vk.svg', center, no-repeat, cover, 23px, 23px);
+                margin-right: 36px;
+            }
+            .working-hours__link-telegram {
+                @include backgroundImage('../../assets/images/telegram.svg', center, no-repeat, cover, 23px, 23px);
+                margin-right: 36px;
+            }
+            .working-hours__link-instagram {
+                @include backgroundImage('../../assets/images/instagram.svg', center, no-repeat, cover, 23px, 23px);
+                margin-right: 36px;
+            }
+            .working-hours__link-whatsapp {
+                @include backgroundImage('../../assets/images/whatsapp.svg', center, no-repeat, cover, 23px, 23px);
+                margin-right: 36px;
+            }
+        }
+    }
+    .footer__heading {
+        display: none;
+    }
 }
