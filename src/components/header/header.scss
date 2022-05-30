@@ -1,163 +1,163 @@
-    .header {
-        height: 100px;
-        width: 1785px / 1920px * 100%;
-        margin: $center;
-        max-width: 1785px;
-        @include flex(row, space-between, center);
-        .header__logo {
-            @include backgroundImage('../../assets/images/Logo.jpg', center, no-repeat, cover, 100px, 100px);
-            margin-right: -5px;
+.header {
+    height: 100px;
+    width: 1785px / 1920px * 100%;
+    margin: $center;
+    max-width: 1785px;
+    @include flex(row, space-between, center);
+    .header__logo {
+        @include backgroundImage('../../assets/images/Logo.jpg', center, no-repeat, cover, 100px, 100px);
+        margin-right: -5px;
+    }
+    .header__burger-menu {
+        @include backgroundImage('../../assets/images/burger menu.svg', center, no-repeat, cover, 56px, 56px);
+        border: none;
+        background-color: $footerTextColor;
+    }
+    .header__nav {
+        @include flex(row, space-around, center);
+        width: 665px / 1785px * 100%;
+        margin-left: -45px;
+        margin-right: 15px;
+        .header__nav-item {
+            @include font(1rem, 700, 144%, center, 1, $secondaryTextColor, 0.07rem);
+            text-transform: uppercase;
+            text-decoration: none;
         }
-        .header__burger-menu {
-            @include backgroundImage('../../assets/images/burger menu.svg', center, no-repeat, cover, 56px, 56px);
-            border: none;
-            background-color: $footerTextColor;
+    }
+    .header__callback {
+        @include font(0.875rem, 700, 122%, center, 1, $quaternaryTextColor, 0.04rem);
+        text-transform: uppercase;
+        border-bottom: 1px dashed $quaternaryTextColor;
+        padding: 0 0 5px 0;
+        margin-top: 10px;
+    }
+    .header__tel {
+        @include font(1rem, 400, 122%, center, 1, $secondaryTextColor, 0.08em);
+        margin-right: 20px;
+        .header__span-tel {
+            color: $primaryTextColor;
+            font-weight: 600;
+        }
+    }
+    .header__links {
+        @include flex(row, space-between, center);
+        .header__link-vk {
+            @include backgroundImage('../../assets/images/vk.svg', center, no-repeat, cover, 20px, 20px);
+            margin-right: 12px;
+        }
+        .header__link-telegram {
+            @include backgroundImage('../../assets/images/telegram.svg', center, no-repeat, cover, 20px, 20px);
+            margin-right: 12px;
+        }
+        .header__link-instagram {
+            @include backgroundImage('../../assets/images/instagram.svg', center, no-repeat, cover, 20px, 20px);
+            margin-right: 12px;
+        }
+        .header__link-whatsapp {
+            @include backgroundImage('../../assets/images/whatsapp.svg', center, no-repeat, cover, 20px, 20px);
+        }
+    }
+    .header__buttons {
+        @include flex(row, space-between, center);
+        .header__button_search {
+            @include backgroundImage('../../assets/images/search.svg', center, no-repeat, cover, 60px, 60px);
+            margin-right: 16px;
+        }
+        .header__button_like {
+            @include backgroundImage('../../assets/images/like.svg', center, no-repeat, cover, 60px, 60px);
+            margin-right: 16px;
+        }
+        .header__button_orders {
+            @include backgroundImage('../../assets/images/cart.svg', center, no-repeat, cover, 60px, 60px);
+        }
+    }
+}
+
+@media screen and (max-width: $desktopSmall) {
+    .header {
+        max-width: 1190px;
+        .header__logo {
+            @include backgroundImage('../../assets/images/Logo768.png', center, no-repeat, cover, 64px, 62px);
         }
         .header__nav {
-            @include flex(row, space-around, center);
-            width: 665px / 1785px * 100%;
-            margin-left: -45px;
-            margin-right: 15px;
-            .header__nav-item {
-                @include font(1rem, 700, 144%, center, 1, $secondaryTextColor, 0.07rem);
-                text-transform: uppercase;
-                text-decoration: none;
-            }
+            margin-right: 0;
+            margin-left: 0;
+            display: none;
         }
-        .header__callback {
-            @include font(0.875rem, 700, 122%, center, 1, $quaternaryTextColor, 0.04rem);
-            text-transform: uppercase;
-            border-bottom: 1px dashed $quaternaryTextColor;
-            padding: 0 0 5px 0;
-            margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: ($tablet + 100px)) {
+    .header {
+        height: 105px;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 738px;
+        border-bottom: 1px solid #e5e5e5;
+        .header__logo-link {
+            margin-right: 50%;
         }
-        .header__tel {
-            @include font(1rem, 400, 122%, center, 1, $secondaryTextColor, 0.08em);
-            margin-right: 20px;
-            .header__span-tel {
-                color: $primaryTextColor;
-                font-weight: 600;
-            }
+        .header__logo {
+            order: 1;
+        }
+        .header__burger-menu {
+            order: 3;
+        }
+        .header__nav {
+            margin-right: 0;
+            margin-left: 0;
+            display: none;
         }
         .header__links {
-            @include flex(row, space-between, center);
-            .header__link-vk {
-                @include backgroundImage('../../assets/images/vk.svg', center, no-repeat, cover, 20px, 20px);
-                margin-right: 12px;
-            }
-            .header__link-telegram {
-                @include backgroundImage('../../assets/images/telegram.svg', center, no-repeat, cover, 20px, 20px);
-                margin-right: 12px;
-            }
-            .header__link-instagram {
-                @include backgroundImage('../../assets/images/instagram.svg', center, no-repeat, cover, 20px, 20px);
-                margin-right: 12px;
-            }
-            .header__link-whatsapp {
-                @include backgroundImage('../../assets/images/whatsapp.svg', center, no-repeat, cover, 20px, 20px);
-            }
+            display: none;
+        }
+        .header__tel {
+            display: none;
+        }
+        .header__callback {
+            display: none;
         }
         .header__buttons {
-            @include flex(row, space-between, center);
             .header__button_search {
                 @include backgroundImage('../../assets/images/search.svg', center, no-repeat, cover, 60px, 60px);
-                margin-right: 16px;
+                margin-right: 24px;
             }
             .header__button_like {
                 @include backgroundImage('../../assets/images/like.svg', center, no-repeat, cover, 60px, 60px);
-                margin-right: 16px;
+                margin-right: 24px;
             }
             .header__button_orders {
                 @include backgroundImage('../../assets/images/cart.svg', center, no-repeat, cover, 60px, 60px);
+                margin-right: 24px;
             }
         }
     }
+}
 
-    @media screen and (max-width: $desktopSmall) {
-        .header {
-            max-width: 1190px;
+@media screen and (max-width: ($mobile + 100px)) {
+    .header {
+        height: 70px;
+        max-width: 290px;
+        .header__logo-link {
+            margin-right: 47%;
             .header__logo {
-                @include backgroundImage('../../assets/images/Logo768.png', center, no-repeat, cover, 64px, 62px);
+                @include backgroundImage('../../assets/images/Logo320.png', center, no-repeat, cover, 48px, 47px);
             }
-            .header__nav {
-                margin-right: 0;
-                margin-left: 0;
+        }
+        .header__burger-menu {
+            @include backgroundImage('../../assets/images/burger-menu320.svg', center, no-repeat, cover, 44px, 44px);
+        }
+        .header__buttons {
+            .header__button_search {
                 display: none;
+            }
+            .header__button_like {
+                display: none;
+            }
+            .header__button_orders {
+                @include backgroundImage('../../assets/images/cart320.svg', center, no-repeat, cover, 50px, 44px);
+                margin-right: 16px;
             }
         }
     }
-
-    @media screen and (max-width: ($tablet + 100px)) {
-        .header {
-            height: 105px;
-            justify-content: flex-start;
-            width: 100%;
-            max-width: 738px;
-            border-bottom: 1px solid #e5e5e5;
-            .header__logo-link {
-                margin-right: 50%;
-            }
-            .header__logo {
-                order: 1;
-            }
-            .header__burger-menu {
-                order: 3;
-            }
-            .header__nav {
-                margin-right: 0;
-                margin-left: 0;
-                display: none;
-            }
-            .header__links {
-                display: none;
-            }
-            .header__tel {
-                display: none;
-            }
-            .header__callback {
-                display: none;
-            }
-            .header__buttons {
-                .header__button_search {
-                    @include backgroundImage('../../assets/images/search.svg', center, no-repeat, cover, 60px, 60px);
-                    margin-right: 24px;
-                }
-                .header__button_like {
-                    @include backgroundImage('../../assets/images/like.svg', center, no-repeat, cover, 60px, 60px);
-                    margin-right: 24px;
-                }
-                .header__button_orders {
-                    @include backgroundImage('../../assets/images/cart.svg', center, no-repeat, cover, 60px, 60px);
-                    margin-right: 24px;
-                }
-            }
-        }
-    }
-
-    @media screen and (max-width: ($mobile + 100px)) {
-        .header {
-            height: 70px;
-            max-width: 290px;
-            .header__logo-link {
-                margin-right: 47%;
-                .header__logo {
-                    @include backgroundImage('../../assets/images/Logo320.png', center, no-repeat, cover, 48px, 47px);
-                }
-            }
-            .header__burger-menu {
-                @include backgroundImage('../../assets/images/burger-menu320.svg', center, no-repeat, cover, 44px, 44px);
-            }
-            .header__buttons {
-                .header__button_search {
-                    display: none;
-                }
-                .header__button_like {
-                    display: none;
-                }
-                .header__button_orders {
-                    @include backgroundImage('../../assets/images/cart320.svg', center, no-repeat, cover, 50px, 44px);
-                    margin-right: 16px;
-                }
-            }
-        }
-    }
+}

@@ -1,192 +1,192 @@
+.consultation {
+    .consultation__heading {
+        @include font(3.125rem, 800, 80%, center, 1, $primaryTextColor, 0);
+        margin: 0 0 12px 25px;
+        text-transform: uppercase;
+    }
+    .consultation__description {
+        @include font(1.375rem, 300, 188%, center, 1, $primaryTextColor, 0.06rem);
+        margin: 0 0 30px 0;
+    }
+    .consultation__links {
+        @include flex(row, center, center);
+        margin: 0 0 40px 0;
+        .consultation__link-vk {
+            @include backgroundImage('../../assets/images/vk-orange.svg', center, no-repeat, cover, 23px, 23px);
+            margin-right: 30px;
+        }
+        .consultation__link-telegram {
+            @include backgroundImage('../../assets/images/telegram-orange.svg', center, no-repeat, cover, 22px, 23px);
+            margin-right: 30px;
+        }
+        .consultation__link-instagram {
+            @include backgroundImage('../../assets/images/instagram-orange.svg', center, no-repeat, cover, 18px, 19px);
+            margin-right: 30px;
+        }
+        .consultation__link-whatsapp {
+            @include backgroundImage('../../assets/images/whatsapp-orange.svg', center, no-repeat, cover, 18px, 19px);
+        }
+    }
+}
+
+.form {
+    max-width: 866px / 1218px * 100%;
+    height: 260px;
+    margin: 0 auto 105px;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+    .form__description {
+        @include font(1.25rem, 500, 110%, start, 1, $primaryTextColor, 0.08rem);
+        padding: 55px 0 15px 60px;
+        margin: 0;
+        .form__description-span {
+            color: $fifthTextColor;
+            font-weight: 600;
+        }
+    }
+    .form__callback-text {
+        @include font(1rem, 400, 188%, start, 1, $primaryTextColor, 0.06rem);
+        padding: 0 0 20px 60px;
+        margin: 0;
+    }
+    .form__input[type='text'] {
+        margin: 0 12px 0 60px;
+    }
+    .form__input {
+        width: 240px;
+        height: 56px;
+        border: 1px solid #E5E5E5;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-right: 12px;
+        @include font(1rem, 500, 157%, start, 1, $primaryTextColor, 0.1rem);
+        &::placeholder {
+            @include font(0.875rem, 500, 157%, start, 1, #B1B1B1, 0.05rem);
+            padding: 17px;
+        }
+    }
+    .form__button {
+        background: #215359;
+        border-radius: 4px;
+        width: 240px;
+        height: 56px;
+        @include font(1rem, 700, 125%, center, 1, $footerTextColor, 0.06rem);
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: $desktopSmall) {
     .consultation {
         .consultation__heading {
-            @include font(3.125rem, 800, 80%, center, 1, $primaryTextColor, 0);
-            margin: 0 0 12px 25px;
-            text-transform: uppercase;
+            font-size: 2.5rem;
+            margin: 0 0 12px 0;
+            line-height: 75%;
         }
         .consultation__description {
-            @include font(1.375rem, 300, 188%, center, 1, $primaryTextColor, 0.06rem);
-            margin: 0 0 30px 0;
-        }
-        .consultation__links {
-            @include flex(row, center, center);
-            margin: 0 0 40px 0;
-            .consultation__link-vk {
-                @include backgroundImage('../../assets/images/vk-orange.svg', center, no-repeat, cover, 23px, 23px);
-                margin-right: 30px;
-            }
-            .consultation__link-telegram {
-                @include backgroundImage('../../assets/images/telegram-orange.svg', center, no-repeat, cover, 22px, 23px);
-                margin-right: 30px;
-            }
-            .consultation__link-instagram {
-                @include backgroundImage('../../assets/images/instagram-orange.svg', center, no-repeat, cover, 18px, 19px);
-                margin-right: 30px;
-            }
-            .consultation__link-whatsapp {
-                @include backgroundImage('../../assets/images/whatsapp-orange.svg', center, no-repeat, cover, 18px, 19px);
-            }
+            font-size: 1.25rem;
+            margin: 0 0 20px 0;
         }
     }
-
     .form {
-        max-width: 866px / 1218px * 100%;
-        height: 260px;
-        margin: 0 auto 105px;
-        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+        @include flex(column, flex-start, center);
+        max-width: 100%;
+        height: 390px;
+        margin: 0 auto 58px;
+        gap: 15px;
         .form__description {
-            @include font(1.25rem, 500, 110%, start, 1, $primaryTextColor, 0.08rem);
-            padding: 55px 0 15px 60px;
-            margin: 0;
-            .form__description-span {
-                color: $fifthTextColor;
-                font-weight: 600;
-            }
+            padding: 50px 0 0 0;
+            text-align: center;
         }
         .form__callback-text {
-            @include font(1rem, 400, 188%, start, 1, $primaryTextColor, 0.06rem);
-            padding: 0 0 20px 60px;
-            margin: 0;
+            text-align: center;
+            padding: 0 0 20px 0;
         }
         .form__input[type='text'] {
-            margin: 0 12px 0 60px;
+            margin: 0;
         }
         .form__input {
-            width: 240px;
-            height: 56px;
-            border: 1px solid #E5E5E5;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-right: 12px;
-            @include font(1rem, 500, 157%, start, 1, $primaryTextColor, 0.1rem);
-            &::placeholder {
-                @include font(0.875rem, 500, 157%, start, 1, #B1B1B1, 0.05rem);
-                padding: 17px;
-            }
+            width: 350px;
+            margin: 0;
         }
         .form__button {
-            background: #215359;
-            border-radius: 4px;
-            width: 240px;
-            height: 56px;
-            @include font(1rem, 700, 125%, center, 1, $footerTextColor, 0.06rem);
-            padding: 0;
+            margin-top: 10px;
         }
     }
+}
 
-    @media screen and (max-width: $desktopSmall) {
-        .consultation {
-            .consultation__heading {
-                font-size: 2.5rem;
-                margin: 0 0 12px 0;
-                line-height: 75%;
-            }
-            .consultation__description {
-                font-size: 1.25rem;
-                margin: 0 0 20px 0;
-            }
+@media screen and (max-width: ($tablet + 100px)) {
+    .consultation {
+        .consultation__heading {
+            font-size: 2.375rem;
+            margin: 0 0 12px 0;
+            line-height: 75%;
         }
-        .form {
-            @include flex(column, flex-start, center);
-            max-width: 100%;
-            height: 390px;
-            margin: 0 auto 58px;
-            gap: 15px;
-            .form__description {
-                padding: 50px 0 0 0;
-                text-align: center;
-            }
-            .form__callback-text {
-                text-align: center;
-                padding: 0 0 20px 0;
-            }
-            .form__input[type='text'] {
-                margin: 0;
-            }
-            .form__input {
-                width: 350px;
-                margin: 0;
-            }
-            .form__button {
-                margin-top: 10px;
-            }
+        .consultation__description {
+            font-size: 1rem;
+            margin: 0 0 25px 0;
+        }
+        .consultation__links {
+            margin: 0 0 35px 0;
         }
     }
+    .form {
+        @include flex(column, flex-start, center);
+        gap: 0;
+        .form__description {
+            padding: 48px 0 0 0;
+            letter-spacing: 0.1rem;
+            margin-bottom: 15px;
+        }
+        .form__callback-text {
+            padding: 0 0 18px 0;
+        }
+        .form__input[type='text'] {
+            margin: 0 0 15px 0;
+        }
+        .form__input {
+            width: 350px;
+            margin: 0 0 15px 0;
+        }
+    }
+}
 
-    @media screen and (max-width: ($tablet + 100px)) {
-        .consultation {
-            .consultation__heading {
-                font-size: 2.375rem;
-                margin: 0 0 12px 0;
-                line-height: 75%;
-            }
-            .consultation__description {
-                font-size: 1rem;
-                margin: 0 0 25px 0;
-            }
-            .consultation__links {
-                margin: 0 0 35px 0;
-            }
+@media screen and (max-width: ($mobile + 100px)) {
+    .consultation {
+        .consultation__heading {
+            font-size: 1.375rem;
+            margin: 0 0 2px 0;
+            line-height: 136%;
         }
-        .form {
-            @include flex(column, flex-start, center);
-            gap: 0;
-            .form__description {
-                padding: 48px 0 0 0;
-                letter-spacing: 0.1rem;
-                margin-bottom: 15px;
-            }
-            .form__callback-text {
-                padding: 0 0 18px 0;
-            }
-            .form__input[type='text'] {
-                margin: 0 0 15px 0;
-            }
-            .form__input {
-                width: 350px;
-                margin: 0 0 15px 0;
-            }
+        .consultation__description {
+            font-size: 0.875rem;
+            margin: 0 0 23px 0;
+        }
+        .consultation__links {
+            margin: 0 0 21px 0;
         }
     }
-
-    @media screen and (max-width: ($mobile + 100px)) {
-        .consultation {
-            .consultation__heading {
-                font-size: 1.375rem;
-                margin: 0 0 2px 0;
-                line-height: 136%;
-            }
-            .consultation__description {
-                font-size: 0.875rem;
-                margin: 0 0 23px 0;
-            }
-            .consultation__links {
-                margin: 0 0 21px 0;
-            }
+    .form {
+        @include flex(column, flex-start, center);
+        gap: 0;
+        box-shadow: none;
+        border-top: 1px solid #e5e5e5;
+        margin: 0 auto 2px;
+        .form__description {
+            padding: 25px 0 0 0;
+            margin-bottom: 12px;
+            font-size: 1.0625rem;
+            line-height: 144%;
         }
-        .form {
-            @include flex(column, flex-start, center);
-            gap: 0;
-            box-shadow: none;
-            border-top: 1px solid #e5e5e5;
-            margin: 0 auto 2px;
-            .form__description {
-                padding: 25px 0 0 0;
-                margin-bottom: 12px;
-                font-size: 1.0625rem;
-                line-height: 144%;
-            }
-            .form__callback-text {
-                font-size: 0.875rem;
-                line-height: 179%;
-                padding: 0 0 27px 0;
-            }
-            .form__input[type='text'] {
-                margin: 0 0 15px 0;
-            }
-            .form__input {
-                width: 290px;
-                margin: 0 0 15px 0;
-            }
+        .form__callback-text {
+            font-size: 0.875rem;
+            line-height: 179%;
+            padding: 0 0 27px 0;
+        }
+        .form__input[type='text'] {
+            margin: 0 0 15px 0;
+        }
+        .form__input {
+            width: 290px;
+            margin: 0 0 15px 0;
         }
     }
+}
